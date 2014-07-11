@@ -1,0 +1,45 @@
+<h1>Listado de asistencias</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Puesto</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @attendances.each do |attendance| %>
+      <tr>
+        <td><%= attendance.name %></td>
+        <td><%= attendance.puesto %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<table>
+  <thead>
+    <tr>
+      <th>Fecha</th>
+      <th>Hora</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @attendances2.each do |attendance| %>
+      <tr>
+        <td><%= attendance.fecha %></td>
+        <td><%= attendance.hora %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

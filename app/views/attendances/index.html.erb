@@ -1,0 +1,16 @@
+<h1>Attendances#index</h1>
+<br /><br /><br />
+<h4> Por favor ingrese el código del empleado para agregar asistencia </h4>
+<%= form_tag({:controller => "attendances", :action => "new"}, :method => "get") do %>
+   <%= label_tag "código", "Código de usuario" %>
+   <%= text_field_tag "codigo", "", :size => 5, :maxlenght => 5, :placeholder => "Código", :required => "required" %>
+   <br />
+   <%= submit_tag "Enviar" %>
+<% end %><br /><br /><br />
+<h3> Por favor ingrese el código del empleado para ver asistencia </h3>
+<%= form_tag({:controller => "attendances", :action => "show"}, :method => "get") do %>
+   <%= label_tag "código", "Código de usuario" %>
+   <%= text_field_tag "codigo", "", :size => 5, :maxlenght => 5, :placeholder => "Código", :required => "required" %>
+   <br />
+   <%= submit_tag "Enviar" %>
+<% end %>
